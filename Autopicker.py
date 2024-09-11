@@ -124,4 +124,17 @@ for idx in range(0, len(traces), 2):
         if y_value_p_ew is not None:
             plt.plot(time_index_p_ew, y_value_p_ew, 'ro', label='P-Welle')
         if max_value_p_ew is not None:
-            plt.plot(m
+            plt.plot(max_index_p_ew, max_value_p_ew, 'kx', label='Maximale Amplitude P-Welle')
+        if y_value_s_ew is not None:
+            plt.plot(time_index_s_ew, y_value_s_ew, 'bo', label='S-Welle')
+        plt.xlabel('Zeitindex')
+        plt.legend()
+        plt.title(f'Station {station_number} (EW)')
+        plt.show()
+
+# Ausgabe der Arrays
+print("Einsatzzeiten der P-Welle:", p_wave_times)
+print("Einsatzzeiten der S-Welle:", s_wave_times)
+print("Maximale Amplituden der NS-Komponente (A_NS):", a_ns)
+print("Maximale Amplituden der EW-Komponente (A_EW):", a_ew)
+
